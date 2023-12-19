@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: "Harry Potter",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --cor-background: #000;
+    --cor-white: #fff;
+    --cor-golden: #d4a523;
+}
+
+body {
+    background-color: var(--cor-background);
+    color: var(--cor-white);
+    
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--cor-golden);
+}
+
+a {
+    color: var(--cor-white);
+    text-decoration: none;
+}
+
+.buckbeak {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--cor-background));
+    position: relative;
+    min-height: 100vh;
+
+}
+.buckbeak__background {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -10;    
+}
+
+.buckbeak__foreground {
+    color: var(--cor-white);
+    text-align: center;
+    padding-top: 45vh ;
+}
+
+.buckbeak__title {
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.buckbeak__text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    letter-spacing: .5rem;
+}
+
+.section {
+    padding: 0 9rem;
+    text-align: center;
+}
+
+.section__characters {
+    text-align: center;
+}
+
+
+.characters__title {
+    font-size: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;  
+}
+
+.gif__characters {
+    display: inline-block;
+    width: 26rem;
+    height: 20rem;
+}
+
+.description__text {
+    padding: 1rem;
+}
+
+.section__movies {
+    text-align: center;
+}
+.movies__title {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.movies {
+    display: inline-block;
+    width: 18rem;
+}
+.img__movies{
+    height: 22rem;
+    padding: 1rem;
+    
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+}
+
+footer > h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--cor-golden));
+    }
+
+    to {
+        filter: drop-shadow(0 0 1rem var(--cor-golden));
+    }
+}
+
+.movies:hover {
+    /* box-shadow: 0 .75rem 3rem -.5rem var(--cor-golden); */
+    animation: neon 1s alternate-reverse infinite ease-in-out;
+}
